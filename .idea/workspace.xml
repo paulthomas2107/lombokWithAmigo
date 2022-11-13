@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd547f9d-d76a-46dd-8eed-cd2ef8bdc5e4" name="Changes" comment="Initial">
+    <list default="true" id="bd547f9d-d76a-46dd-8eed-cd2ef8bdc5e4" name="Changes" comment="More">
+      <change afterPath="$PROJECT_DIR$/lombok.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pault/lombok/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pault/lombok/Movie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/pault/lombok/MovieTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pault/lombok/MovieTest.java" afterDir="false" />
     </list>
@@ -91,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668345817393</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="More">
+      <created>1668349591741</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668349591741</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -107,6 +116,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial" />
+    <MESSAGE value="More" />
+    <option name="LAST_COMMIT_MESSAGE" value="More" />
   </component>
 </project>

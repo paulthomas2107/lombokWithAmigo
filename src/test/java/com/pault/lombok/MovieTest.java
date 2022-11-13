@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -14,14 +15,18 @@ class MovieTest extends Movie {
 
     @BeforeEach
     void setUp() throws MalformedURLException {
-        movie = new Movie();
-        movie.setTitle("The Lord of The Rings: The Fellowship of The Ring");
-        movie.setDescription("Set in Middle Earth with Hobbits and Trolls etc.");
-        movie.setCountry("New Zealand / United States");
-        movie.setLanguage("English");
-        movie.setRating(8);
-        movie.setOfficialSite(new URL("https://www.lordoftherings.com"));
-        movie.setId(1L);
+
+        movie = Movie.builder()
+                .title("The Lord of The Rings: The Fellowship of The Ring")
+                .description("Set in Middle Earth with Hobbits and Trolls etc.")
+                .country("New Zealand / United States")
+                .language("English")
+                .rating(8)
+                .officialSite(new URL("https://www.lordoftherings.com"))
+                .id(1L)
+                .minutes(120)
+                .cast(Arrays.asList("Paul", "Caitlin", "Rory"))
+                .build();
     }
 
     @Test
@@ -120,4 +125,19 @@ class MovieTest extends Movie {
         assertNotNull(movie);
         assertEquals(121, movie.getMinutesPlusX(1));
     }
+
+
+    @Test
+    void testSetCast() {
+        assertNotNull(movie);
+        movie.setCast(Arrays.asList("Paul", "Caitlin", "Rory"));
+        assertEquals(Arrays.asList("Paul", "Caitlin", "Rory"), movie.getCast());
+    }
+
+    @Test
+    void testGetCast() {
+        assertNotNull(movie);
+        assertEquals(Arrays.asList("Paul", "Caitlin", "Rory"), movie.getCast());
+    }
+
 }

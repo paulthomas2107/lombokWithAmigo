@@ -1,14 +1,18 @@
 package com.pault.lombok;
 
 import lombok.*;
-import lombok.experimental.Accessors;
+
 
 import java.net.URL;
+import java.util.List;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder(toBuilder = true)
+//@Slf4j(topic = "MovieDAO")
+@CustomLog
 public class Movie {
 
     @NonNull
@@ -22,11 +26,14 @@ public class Movie {
     @Getter(AccessLevel.PROTECTED)
     private URL officialSite;
     private String language;
-    @Setter(AccessLevel.PRIVATE)
     @Getter(AccessLevel.PRIVATE)
+    @Builder.Default
     private final int minutes = 120;
+    @Singular("cast")
+    private List<String> cast;
 
     public int getMinutesPlusX(@NonNull int x) {
+        log.info("Adding {}" + x);
         return getMinutes() + x;
     }
 }
